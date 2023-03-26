@@ -1,0 +1,31 @@
+.wrapper {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     width: 100%;
+     border-bottom: 1px solid grey;
+}
+
+.footerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+.listItems {
+    margin-bottom: 25%;
+}
+
+
