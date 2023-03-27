@@ -1,9 +1,11 @@
 import { useCart } from "./UI/CartContext";
 import styles from "../styles/Cart.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Cart = () => {
-  const { cart, removeFromCart, incrementQuantity, decrementQuantity } = useCart();
+  const { cart, removeFromCart, incrementQuantity, decrementQuantity } =
+    useCart();
 
   const formatCurrency = (value) => {
     return new Intl.NumberFormat("en-US", {
@@ -20,17 +22,12 @@ const Cart = () => {
     removeFromCart(id);
   };
 
-
-  const handleCheckout = () => {
-    alert("Proceeding to checkout");
-  };
-
   return (
     <div className={styles.cartContainer}>
       <h1 className={styles.h1}>CART</h1>
       <section className={styles.cartHeader}>
         <p>Item</p>
-        <p>Quantity</p>
+        <p className={styles.quantity}>Quantity</p>
         <p>Subtotal</p>
       </section>
       {cart.length === 0 ? (
@@ -48,9 +45,19 @@ const Cart = () => {
               <p>Size: {item.size}</p>
             </div>
             <div className={styles.quantityControl}>
-              <button className={styles.button}  onClick={() => decrementQuantity(item.id)}>-</button>
+              <button
+                className={styles.button}
+                onClick={() => decrementQuantity(item.id)}
+              >
+                -
+              </button>
               <span>{item.quantity}</span>
-              <button className={styles.button} onClick={() => incrementQuantity(item.id)}>+</button>
+              <button
+                className={styles.button}
+                onClick={() => incrementQuantity(item.id)}
+              >
+                +
+              </button>
             </div>
             <Image
               src={"/trash.png"}
@@ -70,10 +77,18 @@ const Cart = () => {
         <p className={styles.total}>Total:</p>
         <p className={styles.cost}>{formatCurrency(getTotalCost())}</p>
       </section>
-
-      <button className={styles.checkoutButton} onClick={handleCheckout}>
-        CHECKOUT
-      </button>
+      <div className={styles.buttonContainer}>
+        <Link href="/">
+          <button className={styles.checkoutButton}>CHECKOUT</button>
+        </Link>
+        <Link href="/AllItems">
+          <button
+            className={`${styles.checkoutButton} ${styles.continueShoppingButton}`}
+          >
+            CONTINUE SHOPPING
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

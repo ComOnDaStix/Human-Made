@@ -17,6 +17,10 @@ const Navbar = () => {
 
   const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   useEffect(() => {
     if (itemAdded) {
       setShowSmallCart(true);
@@ -151,52 +155,52 @@ const Navbar = () => {
             <h3 className={styles.menuTitle}>CATEGORY</h3>
             <div className={styles.listItems}>
               <ul className={styles.ul}>
-                <Link href="/" className={styles.link}>
+                <Link href="/AllItems" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>ALL ITEMS</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>NEW ARRIVALS</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>OUTERWEAR</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>SHIRTS</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>T-SHIRTS</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>SWEATERS</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>PANTS</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>SHOES</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>CAP & HAT</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>BAG & POUCH</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>ACCESSORIES</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>INNER WEAR</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>HOME & LIFESTYLE</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>COLLABORATION ITEMS</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>Wasted Youth</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem}>CATUS PLANT FLEA MARKET</li>
                 </Link>
               </ul>
@@ -206,13 +210,13 @@ const Navbar = () => {
             <h3 className={styles.menuTitle2}>CATEGORY</h3>
             <div className={styles.listItems}>
               <ul className={styles.ul}>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem2}>ALL ITEMS</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem2}>NEW ARRIVALS</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem2}>OUTERWEAR</li>
                 </Link>
               </ul>
@@ -222,16 +226,16 @@ const Navbar = () => {
             <h3 className={styles.menuTitle}>CATEGORY</h3>
             <div className={styles.listItems}>
               <ul className={styles.ul}>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem3}>ALL ITEMS</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem3}>NEW ARRIVALS</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem3}>OUTERWEAR</li>
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.link} onClick={closeMenu}>
                   <li className={styles.listItem3}>SHIRTS</li>
                 </Link>
               </ul>

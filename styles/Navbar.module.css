@@ -233,9 +233,24 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+@media (max-width: 1509px) {
+  .searchIcon {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .itemsContainer {
     justify-content: center;
+  }
+
+  .searchIcon {
+    display: none;
+  }
+
+  .closeIcon {
+    margin-left: 20%;
   }
 
   .items:nth-child(1) {

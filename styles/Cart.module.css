@@ -45,6 +45,10 @@
   padding: 5px;
 }
 
+.continueShoppingButton {
+  display: none;
+}
+
 .deleteButton {
   background: none;
   border: none;
@@ -66,6 +70,10 @@
   background-color: white;
 }
 
+.buttonContainer {
+  display: flex;
+}
+
 .totalCost {
   display: flex;
   justify-content: space-between;
@@ -78,7 +86,7 @@
 }
 
 .checkoutButton {
-  display: inline-block;
+  
   padding: 15px 50px;
   background-color: #000;
   color: #fff;
@@ -87,7 +95,7 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.1s ease;
-  margin-left: 63%;
+  margin-left: 20%;
   letter-spacing: 2px;
 }
 
@@ -110,5 +118,54 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartContainer {
+    width: 90%;
+    margin-left: 6.0%;
+  }
+
+  .continueShoppingButton {
+    display: block;
+  }
+
+  .cartHeader,
+.cartItem {
+  display: flex;
+  flex-direction: column; /* Change to column direction */
+  align-items: center; /* Center elements */
+  gap: 1rem; /* Add gap between elements */
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 0;
+  width: 70%;
+  margin-left: 20;
+}
+
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+}
+ 
+
+  .quantity {
+    display: none;
+  }
+
+  .itemDetails {
+    width: auto;
+  }
+
+  .subtotal,
+  .totalCost {
+    margin-left: 0;
+  }
+
+  .checkoutButton {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 5%;
   }
 }

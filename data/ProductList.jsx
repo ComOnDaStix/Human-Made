@@ -4,7 +4,7 @@ const ProductList = [
     title: "DAILY L/S T-SHIRT",
     price: 100,
     imageUrl: "/item1.webp",
-    imageUrlBack: "/itemBack.webp",
+    imageUrlBack: "/item2back.webp",
     sizes: ["S", "M", "L", "XL"],
     description: `The “DAILY” T-shirt series has a daily design that is perfect as a gift to commemorate a special day such as a birthday.
 The T-shirt has Human Made’s iconic heart logo printed large on the front, while the date of sale is printed on the back, resulting in a design unique to and only available 

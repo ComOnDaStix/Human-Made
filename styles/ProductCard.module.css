@@ -33,3 +33,11 @@
   
 }
 
+@media (max-width: 667px) {
+  .ProductImage {
+    width: 100%; 
+    object-fit: cover;
+  }
+}
+  
+

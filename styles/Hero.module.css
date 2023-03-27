@@ -23,6 +23,7 @@
   padding: 10px 10px;
 }
 
+
 @media (max-width: 768px) {
   .heroImgContainer {
     width: 100%;
@@ -30,6 +31,14 @@
   .heroImgContainer img {
     width: 414px;
     height: 621px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 667px) {
+  .heroImgContainer img {
+    width: 100%; /* Set width to 100% to make it responsive */
+    height: auto; /* Set height to auto to maintain aspect ratio */
     object-fit: cover;
   }
 }
@@ -42,3 +51,13 @@
     opacity: 1;
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

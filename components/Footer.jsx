@@ -6,7 +6,7 @@ const Footer = () => {
     <div className={styles.wrapper}>
       <div className={styles.footerContainer}>
         <div className={styles.SectionOne}>
-          <ul>
+          <ul className={styles.ul}>
             <Link href="/" className={styles.link}>
               <li className={styles.listItems}>ALL ITEMS</li>
             </Link>
@@ -28,7 +28,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles.SectionTwo}>
-          <ul>
+          <ul className={styles.ul}>
             <Link href="/" className={styles.link}>
               <li className={styles.listItems}>ALL ITEMS</li>
             </Link>
@@ -50,7 +50,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles.SectionThree}>
-          <ul>
+          <ul className={styles.ul}>
             <Link href="/" className={styles.link}>
               <li className={styles.listItems}>ALL ITEMS</li>
             </Link>

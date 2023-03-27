@@ -6,7 +6,7 @@ const SubFooter = () => {
         <div className={styles.wrapper}>
          <div className={styles.subFooterContainer}>
             <div className={styles.FooterInfo}>
-                <Image src={"/footerimg.avif"} width={200} height={32}/>
+                <Image src={"/footerimg.avif"} width={200} height={32} className={styles.humanMade}/>
             </div>
             <div className={styles.footerIcons}>
                 <Image className={styles.footerIcon} src={"/igLogo.svg"} width={25} height={25}/>

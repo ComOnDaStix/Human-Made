@@ -10,30 +10,34 @@ const Login = () => {
         </div>
         <div className={styles.formContainer}>
           <form action="">
-            <label className={styles.label} htmlFor="email"></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className={styles.input}
-              placeholder="Email Address"
-              required
-            />
+            <div className={styles.formItem}>
+              <label className={styles.label} htmlFor="email"></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className={styles.input}
+                placeholder="Email Address"
+                required
+              />
+            </div>
 
-            <label className={styles.label} htmlFor="password"></label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              className={styles.input}
-              placeholder="Password"
-              required
-            />
+            <div className={styles.formItem}>
+              <label className={styles.label} htmlFor="password"></label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                className={styles.input}
+                placeholder="Password"
+                required
+              />
+            </div>
 
             <Link className={styles.link} href="/">
-            <button type="submit" className={styles.loginButton}>
-              Login
-            </button>
+              <button type="submit" className={styles.loginButton}>
+                Login
+              </button>
             </Link>
           </form>
         </div>

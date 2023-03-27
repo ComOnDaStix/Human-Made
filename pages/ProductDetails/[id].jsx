@@ -40,37 +40,38 @@ export default function ProductDetails({ product }) {
               height={100}
             />
           </div>
-          <div className={styles.selectors}>
-            <div className={styles.sizeSelector}>
-              <label htmlFor="size">Size:</label>
-              <select id="size" name="size">
-                {product.sizes.map((size) => (
-                  <option key={size} value={size}>
-                    {size}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className={styles.qtySelector}>
-              <label htmlFor="qty">Qty:</label>
-              <select id="qty" name="qty">
-                {[...Array(10)].map((_, index) => (
-                  <option key={index + 1} value={index + 1}>
-                    {index + 1}
-                  </option>
-                ))}
-              </select>
+          <div className={styles.selectorsContainer}>
+            <div className={styles.selectors}>
+              <div className={styles.sizeSelector}>
+                <label htmlFor="size">Size:</label>
+                <select id="size" name="size">
+                  {product.sizes.map((size) => (
+                    <option key={size} value={size}>
+                      {size}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className={styles.qtySelector}>
+                <label htmlFor="qty">Qty:</label>
+                <select id="qty" name="qty">
+                  {[...Array(10)].map((_, index) => (
+                    <option key={index + 1} value={index + 1}>
+                      {index + 1}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
-          <AddToCartButton product={product}/>
+          <AddToCartButton product={product} />
           <div className={styles.descriptionContainer}>
             {product.description}
           </div>
         </div>
       </div>
     </>
-  );
-}
+  );}
 
 export async function getServerSideProps({ params }) {
   const allProducts = [...ProductList];
